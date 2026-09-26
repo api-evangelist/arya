@@ -1,23 +1,74 @@
 aid: arya
+
 name: Arya
-description: 'Arya is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://cdn.prod.website-files.com/66f4fc38efdfb829fb67bd5c/68554f33b5c891a3ff03582f_HOMEPAGE.png
+
+description: 'Arya.ai provides enterprise‑grade AI solutions for banking, insurance and lending, offering an API platform (Apex), AI models, and tools for cash‑flow forecasting, document processing, and more. The company aims to democratize AI innovation, delivering scalable, secure APIs and an AI operating system to help businesses integrate advanced intelligence into their workflows.'
+
 url: https://raw.githubusercontent.com/api-evangelist/arya/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI or other machine‑readable spec found; all probe URLs on api.arya.ai returned 404.
+  evidence:
+    - url: https://api.arya.ai/openapi.json
+      status: 404
+    - url: https://api.arya.ai/openapi.yaml
+      status: 404
+    - url: https://api.arya.ai/swagger.json
+      status: 404
+    - url: https://api.arya.ai/v1/openapi.json
+      status: 404
+  checked: 2026-09-26
+
 tags:
-- Company
-apis: []
+- AI
+- Enterprise
+- Banking
+- Insurance
+- Lending
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/arya-hosts.yml
+- type: Vendors
+  url: vendors/arya-vendors.yml
+- type: TermsOfService
+  url: https://arya.ai/terms-and-conditions
+- type: PrivacyPolicy
+  url: https://arya.ai/privacy-policy
+- type: Blog
+  url: https://arya.ai/blog
+- type: DomainSecurity
+  url: security/arya-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://arya.ai/
+
+apis: []
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
